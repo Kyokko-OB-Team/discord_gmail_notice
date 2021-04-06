@@ -69,7 +69,7 @@ function mails(){
                msgBody + 
               "```";
 
-        Logger.log("push discord.")
+        //Logger.log("push discord.");
         discord(postMsg);
 
       }
