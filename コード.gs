@@ -19,6 +19,7 @@ function discord(postMsg){
     'payload' : payload,
     'muteHttpExceptions': true,
   };
+  console.log('push discord.');
   response = UrlFetchApp.fetch(webhooks, params);
 }
 
@@ -69,7 +70,7 @@ function mails(){
                msgBody + 
               "```";
 
-        //Logger.log("push discord.");
+        console.log("push discord.");
         discord(postMsg);
 
       }
