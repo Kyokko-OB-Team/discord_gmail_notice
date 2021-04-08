@@ -26,7 +26,7 @@ function discord(postMsg){
     'payload' : payload,
     'muteHttpExceptions': true,
   };
-  console.log('push discord.');
+  console.log("Push discord.");
   try {
     response = UrlFetchApp.fetch(webhooks, params);
   } catch(e) {
@@ -46,7 +46,7 @@ function mails(){
 
   try {
     var threads = GmailApp.search(searchQuery);
-    console.log("Mail threads length: %d", threads.length);
+    console.log("Mail threads length:" + threads.length);
 
     var messages = GmailApp.getMessagesForThreads(threads);
 
@@ -73,7 +73,7 @@ function mails(){
                 msgBody + 
                 "```";
 
-          console.log("push discord.");
+          console.log("Call discord.");
           discord(postMsg);
 
         }
